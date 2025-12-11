@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mistral-sdxl-mcp"
+version = "0.1.0"
+description = ""
+authors = ["Alexey Zauzin <lehadnk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+requests = "^2.32"
+pytest = "^9.0"
+websockets = "^15.0.1"
+pytest-asyncio = "^1.3.0"
+minio = "^7.2.20"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
