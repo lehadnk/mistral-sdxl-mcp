@@ -25,7 +25,6 @@ class McpClient:
         }
         self.request_number += 1
 
-
         await self.ws.send(json.dumps(msg))
 
         while True:
@@ -42,12 +41,10 @@ class McpClient:
 
             data = json.loads(raw)
 
-            # статусное сообщение — пропускаем
             if data.get("method") == "mcp.status":
                 print("STATUS:", data["params"]["message"])
                 continue
 
-            # это ответ на наш запрос
             if data.get("id") == self.request_number - 1:
                 return data
 
